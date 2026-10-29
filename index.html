@@ -212,5 +212,28 @@ const h=parseInt((location.hash||'').slice(1),10);set(0);if(h>1){stop();requestA
 addEventListener('resize',()=>go(cur,true));raf=requestAnimationFrame(tick);
 })();
 </script>
+<style id="mnav-css">
+.mnav-b{display:none;align-items:center;gap:8px;margin-left:auto;padding:9px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#eef1ff;font:800 15px Inter,system-ui,Arial,sans-serif;cursor:pointer}
+.mnav-b i{font-style:normal;font-size:18px;line-height:1}
+.mnav{position:fixed;inset:0;z-index:100;background:rgba(3,6,20,.6);backdrop-filter:blur(4px);display:none}
+.mnav.on{display:block}
+.mnav-p{position:absolute;top:10px;right:10px;left:10px;max-width:420px;margin-left:auto;padding:14px;border-radius:20px;background:linear-gradient(160deg,#18245a,#0b1230);border:1px solid rgba(255,255,255,.16);box-shadow:0 24px 60px rgba(0,0,0,.55);display:flex;flex-direction:column;gap:6px}
+.mnav-p a{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:14px;color:#eef1ff;text-decoration:none;font:700 17px Inter,system-ui,Arial,sans-serif;background:rgba(255,255,255,.04)}
+.mnav-p a:hover,.mnav-p a:focus-visible{background:rgba(255,255,255,.1)}
+.mnav-p a.pri{background:linear-gradient(135deg,#ffd36e,#ffb22e);color:#2a1d00;justify-content:center;margin-top:6px}
+.mnav-p a[aria-current]{outline:2px solid #6ff6ff}
+.mnav-x{align-self:flex-end;border:0;background:none;color:#cdd6f5;font:800 15px Inter,Arial;padding:6px 8px;cursor:pointer}
+@media (max-width:900px){.mnav-b{display:inline-flex}}
+@media (max-width:900px){header nav .btn.pri{display:none!important}}
+</style>
+<script>(function(){var h=document.querySelector('header .nav')||document.querySelector('header');if(!h)return;
+var b=document.createElement('button');b.type='button';b.className='mnav-b';b.setAttribute('aria-haspopup','dialog');b.innerHTML='<i>☰</i>Menü';h.appendChild(b);
+var L=[['index.html','🚀 Tanıtım'],['tum-ozellikler.html','✨ Tüm özellikler'],['tum-ozellikler.html#nasil','💾 Nasıl kurulur?'],['veri-ve-kvkk.html','🔒 Veri ve KVKK · veli formu'],['lisans.html','📄 Kullanım koşulları'],['https://www.instagram.com/tkasifya/','📷 Instagram: @tkasifya']];
+var cur=location.pathname.split('/').pop()||'index.html';
+var m=document.createElement('div');m.className='mnav';m.setAttribute('role','dialog');m.setAttribute('aria-modal','true');m.setAttribute('aria-label','Site menüsü');
+m.innerHTML='<div class="mnav-p"><button type="button" class="mnav-x">Kapat ✕</button>'+L.map(function(x){var ext=/^https/.test(x[0]);return '<a href="'+x[0]+'"'+(ext?' target="_blank" rel="noopener"':'')+(x[0]===cur?' aria-current="page"':'')+'>'+x[1]+'</a>'}).join('')+'<a class="pri" href="uygulama/index.html" download="kasifya.html">⬇️ Flash belleğe indir</a></div>';
+document.body.appendChild(m);var close=function(){m.classList.remove('on');b.focus()};
+b.onclick=function(){m.classList.add('on');var f=m.querySelector('a');f&&f.focus()};m.querySelector('.mnav-x').onclick=close;
+m.addEventListener('click',function(e){if(e.target===m)close();if(e.target.closest&&e.target.closest('a'))m.classList.remove('on')});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.classList.contains('on'))close()});})();</script>
 </body>
 </html>
