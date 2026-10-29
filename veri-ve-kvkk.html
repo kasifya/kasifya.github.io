@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Veri güvenliği ve KVKK · Kaşifya</title>
+<meta name="description" content="Kaşifya: ortaokul fen bilimleri (5–8. sınıf) için akıllı tahtada sınıfça oynanan oyunlar, 3B deneyler, atölyeler ve kazanım takibi. İnternetsiz çalışır, veriler cihazda kalır.">
+<meta property="og:title" content="Kaşifya">
+<meta property="og:description" content="Fen bilimleri için sınıfça oyunlar, 3B deneyler ve keşif · 5–8. sınıf">
+<meta property="og:image" content="img/anaus.jpg">
+<link rel="icon" type="image/png" sizes="32x32" href="img/kivilcim/favicon-32.png"><link rel="apple-touch-icon" href="img/kivilcim/apple-touch-icon.png">
+<style>
+:root{--bg:#070b1f;--bg2:#0e1538;--ink:#eef1ff;--mut:#a9b3d6;--line:rgba(255,255,255,.12);--c1:#6de8ff;--c2:#8f7dff;--c3:#ff8fb8;--gold:#ffd36e}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Segoe UI",Inter,system-ui,-apple-system,Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+body::before{content:'';position:fixed;inset:0;z-index:-1;background:
+ radial-gradient(1px 1px at 12% 18%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 68% 8%,#fff 50%,transparent 51%),radial-gradient(1.5px 1.5px at 84% 36%,#cfe 50%,transparent 51%),
+ radial-gradient(1px 1px at 32% 64%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 52% 88%,#dde 50%,transparent 51%),radial-gradient(1.5px 1.5px at 6% 82%,#fff 50%,transparent 51%),
+ radial-gradient(60% 50% at 80% 0%,rgba(143,125,255,.22),transparent 70%),radial-gradient(50% 40% at 0% 30%,rgba(109,232,255,.14),transparent 70%),var(--bg)}
+a{color:var(--c1)}img{max-width:100%;height:auto;display:block}
+.wrap{width:min(1180px,100% - 32px);margin:0 auto}
+header{position:sticky;top:0;z-index:5;backdrop-filter:blur(10px);background:rgba(7,11,31,.72);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:14px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-weight:900;letter-spacing:.14em;font-size:18px}
+.logo svg{width:34px;height:34px}
+.nav nav{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}.nav nav a{color:var(--mut);text-decoration:none;padding:8px 12px;border-radius:10px;font-weight:600;font-size:15px}.nav nav a:hover{color:var(--ink);background:rgba(255,255,255,.06)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 18px;border-radius:14px;font-weight:800;text-decoration:none;font-size:16px;white-space:nowrap;border:1px solid var(--line);color:var(--ink);background:rgba(255,255,255,.06)}
+.btn.pri{background:linear-gradient(135deg,var(--c1),var(--c2));color:#060a1f;border-color:transparent;box-shadow:0 10px 30px rgba(109,140,255,.35)}
+.btn:hover{transform:translateY(-1px)}
+.hero{padding:72px 0 40px;display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:center}
+.kick{display:inline-block;font-size:13px;letter-spacing:.24em;font-weight:800;color:var(--gold);margin-bottom:14px}
+h1{font-size:clamp(40px,6vw,72px);line-height:1.02;margin:0 0 18px;letter-spacing:-.02em}
+h1 span{background:linear-gradient(90deg,var(--c1),var(--c2),var(--c3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:clamp(17px,2vw,21px);color:var(--mut);margin:0 0 26px;max-width:36em}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.note{margin-top:16px;font-size:14px;color:var(--mut)}
+.shot{border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.hero .shot{transform:perspective(1400px) rotateY(-8deg) rotateX(3deg)}
+section{padding:56px 0}h2{font-size:clamp(28px,3.6vw,40px);margin:0 0 10px;letter-spacing:-.01em}.sub{color:var(--mut);margin:0 0 30px;max-width:46em}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:10px}
+.stat{padding:18px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--line)}.stat b{display:block;font-size:34px;line-height:1.1;background:linear-gradient(90deg,var(--c1),var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent}.stat span{color:var(--mut);font-size:15px}
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.f{padding:22px;border-radius:18px;background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid var(--line)}
+.f i{font-style:normal;font-size:30px}.f h3{margin:10px 0 6px;font-size:20px}.f p{margin:0;color:var(--mut);font-size:15.5px}
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.gal figure{margin:0}.gal figcaption{margin-top:10px;color:var(--mut);font-size:15px}.gal figcaption b{color:var(--ink)}
+.wide{grid-column:1/-1}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s}
+.step{padding:22px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.03);position:relative}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:-14px;left:18px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:#2a1a00;font-weight:900}
+.step h3{margin:6px 0 6px;font-size:19px}.step p{margin:0;color:var(--mut);font-size:15.5px}
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.t{padding:20px;border-radius:16px;border:1px solid rgba(95,242,168,.3);background:rgba(95,242,168,.05)}.t b{display:block;margin-bottom:4px}.t span{color:var(--mut);font-size:15px}
+.band{margin:20px 0 0;padding:34px;border-radius:24px;background:linear-gradient(135deg,rgba(109,232,255,.16),rgba(143,125,255,.18),rgba(255,143,184,.14));border:1px solid var(--line);display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.band h2{margin:0}
+footer{padding:36px 0 50px;color:var(--mut);font-size:14.5px;border-top:1px solid var(--line);margin-top:30px}
+footer .wrap{display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap;align-items:center}
+.tk{display:inline-flex;align-items:center;gap:8px}.tk em{font-style:normal;display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--gold);color:#2a1a00;font-weight:900;font-size:13px}
+@media (max-width:900px){.hero{grid-template-columns:1fr;padding-top:40px}.hero .shot{transform:none}.feat,.how,.trust{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}.nav nav{display:none}}
+@media (max-width:600px){.feat,.how,.trust,.gal{grid-template-columns:1fr}.btn{width:100%;justify-content:center}}
+
+.kv h1{font-size:clamp(34px,5vw,58px)}.kvhero{padding:48px 0 18px}
+.kvsum{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:8px}.kvsum>div{padding:16px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--line);display:grid;gap:4px}.kvsum b{font-size:16.5px}.kvsum span{color:var(--mut);font-size:14.5px}
+.kvgrid{display:grid;grid-template-columns:240px 1fr;gap:34px;align-items:start;padding-bottom:30px}
+.kvtoc{position:sticky;top:84px;display:grid;gap:4px;padding:16px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.03)}.kvtoc b{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}.kvtoc a{color:var(--mut);text-decoration:none;font-size:15px;padding:5px 8px;border-radius:8px}.kvtoc a:hover{color:var(--ink);background:rgba(255,255,255,.06)}
+.kvbody section{padding:26px 0;border-bottom:1px solid var(--line);scroll-margin-top:80px}.kvbody h2{font-size:clamp(24px,3vw,32px)}.kvbody h3{font-size:18px;margin:0 0 6px}.kvbody p{color:#d3d9f2}
+.kvt{width:100%;border-collapse:collapse;font-size:15.5px;margin:10px 0}.kvt th{text-align:left;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);padding:10px;border-bottom:1px solid var(--line)}.kvt td{padding:12px 10px;border-bottom:1px solid rgba(255,255,255,.07);vertical-align:top;color:#d3d9f2}
+.note{padding:12px 16px;border-radius:14px;background:rgba(109,232,255,.07);border:1px solid rgba(109,232,255,.25);font-size:15px}
+.warn{padding:12px 16px;border-radius:14px;background:rgba(255,211,110,.08);border:1px solid rgba(255,211,110,.35);font-size:15.5px}
+.kvwho{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.kvwho>div{padding:14px 16px;border-radius:14px;border:1px solid;display:grid;gap:4px}.kvwho span{color:var(--mut);font-size:15px}
+.kvwho .y{border-color:rgba(95,242,168,.35);background:rgba(95,242,168,.05)}.kvwho .n{border-color:rgba(255,143,163,.35);background:rgba(255,143,163,.05)}.kvwho .m{border-color:rgba(255,211,110,.35);background:rgba(255,211,110,.05)}
+.kvsetup{display:grid;grid-template-columns:1fr 1fr;gap:14px}.kvs{padding:18px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.03)}.kvs ol{margin:0;padding-left:22px;display:grid;gap:8px;color:#d3d9f2;font-size:15.5px}
+code{font-size:.92em;padding:1px 6px;border-radius:6px;background:rgba(255,255,255,.08);color:var(--c1);word-break:break-all}
+.kvtips{margin-top:14px;padding:16px 18px;border-radius:16px;border:1px solid rgba(143,125,255,.35);background:rgba(143,125,255,.07)}.kvtips ul{margin:8px 0 0;padding-left:20px;display:grid;gap:6px;color:#d3d9f2;font-size:15.5px}
+.kvk{display:grid;grid-template-columns:1fr 1fr;gap:12px}.kvk>div{padding:16px;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid var(--line)}.kvk p{margin:0;font-size:15.5px}
+.kvr{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.kvr>div{padding:16px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.03)}.kvr ul{margin:8px 0 0;padding-left:18px;display:grid;gap:6px;color:#d3d9f2;font-size:15px}
+.kvcl{display:grid;gap:8px}.kvcl label{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border-radius:12px;background:rgba(255,255,255,.03);border:1px solid var(--line);font-size:16px;cursor:pointer}.kvcl input{width:22px;height:22px;flex:none;margin-top:1px;accent-color:#5ff2a8}.kvcl label:has(input:checked){border-color:rgba(95,242,168,.45);background:rgba(95,242,168,.06)}
+.kvff{display:flex;flex-wrap:wrap;gap:10px;align-items:end;margin:10px 0 16px}.kvff label{display:grid;gap:4px;font-size:13px;color:var(--mut);font-weight:700}.kvff input:not([type=checkbox]){padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:#0e1538;color:var(--ink);font:inherit;font-size:15px;min-width:180px}.kvff .ck{display:flex;gap:8px;align-items:center;font-size:15px;color:var(--ink)}
+.kvform{background:#fff;color:#1b2233;border-radius:12px;padding:36px 42px;font:15px/1.55 Georgia,"Times New Roman",serif;box-shadow:0 20px 50px rgba(0,0,0,.4)}.kvform h3{font:700 22px/1.3 Inter,system-ui,sans-serif;text-align:center;margin:0}.kvform .fsub{text-align:center;color:#4b5570;margin:4px 0 18px;font-family:Inter,system-ui,sans-serif;font-size:14px}.kvform p{color:#1b2233;margin:8px 0}
+.kvform .fbox{margin-top:18px;padding:14px 18px;border:1.5px solid #1b2233;border-radius:8px}.kvform .fsig{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;margin-top:18px}.kvform .fsmall{font-size:12.5px;color:#5a6378;margin-top:14px}
+.kvform.nob .fb{display:none}
+.kvol{display:grid;gap:8px;padding-left:22px;color:#d3d9f2;font-size:15.5px}
+.kvbody details{padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.03);margin:8px 0}.kvbody summary{cursor:pointer;font-weight:800;font-size:16.5px}.kvbody details p{margin:8px 0 0}
+.upd{color:var(--mut);font-size:14px;margin-top:20px}
+@media (max-width:1000px){.kvgrid{grid-template-columns:1fr}.kvtoc{position:static}.kvsum,.kvr{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.kvsum,.kvwho,.kvsetup,.kvk,.kvr{grid-template-columns:1fr}.kvform{padding:22px 18px}}
+@media print{body{background:#fff}body::before,header,footer,.kvhero,.kvtoc,.kvbody>section:not(#form),#form>h2,#form>p,.kvff,.upd{display:none!important}.kvgrid{display:block;padding:0}.kvbody section{border:0;padding:0}.kvform{box-shadow:none;padding:0;border-radius:0}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+ <a class="logo" href="index.html"><img src="img/kivilcim/kivilcim_kafa.svg" alt="" width="38" height="38" style="width:38px;height:38px">KAŞİFYA</a>
+ <nav><a href="./#ozellikler">Özellikler</a><a href="./#galeri">Ekranlar</a><a href="./#nasil">Nasıl kullanılır</a><a href="veri-ve-kvkk.html">Veri ve KVKK</a><a href="https://www.instagram.com/tkasifya/" target="_blank" rel="noopener">Instagram</a></nav>
+</div></header>
+<main class="kv">
+<div class="wrap kvhero">
+ <span class="kick">VERİ GÜVENLİĞİ · KVKK · FLASH BELLEK</span>
+ <h1>Öğrenci verileri <span>tahtadan çıkmaz.</span></h1>
+ <p class="lead">Kaşifya sunucusuz çalışır: hiçbir veri internete gönderilmez. Bu sayfada verilerin nerede durduğunu, kimin görebildiğini, flash bellekle birden çok tahtada nasıl çalışacağınızı, KVKK açısından nelere dikkat etmeniz gerektiğini ve veliden nasıl izin alacağınızı bulacaksınız.</p>
+ <div class="kvsum">
+  <div><b>🔒 İnternete veri gitmez</b><span>Kaşifya'nın sunucusu yoktur. Uygulamada internete veri göndermeyi engelleyen bir kilit vardır.</span></div>
+  <div><b>🧑‍🏫 Yalnız öğretmen</b><span>Veriler tahtanın tarayıcısında ve öğretmenin kendi flash belleğinde durur. Geliştirici dahil kimse göremez.</span></div>
+  <div><b>✂️ Az veri</b><span>Öğrenciyi “Ahmet A.” gibi kısaltılmış adla kaydedin. T.C. kimlik no, okul no, fotoğraf girmeyin.</span></div>
+  <div><b>✍️ Veli bilgilendirilir</b><span>Kullanmaya başlamadan önce okul idaresine bilgi verin, velilere bilgilendirme ve izin formu gönderin.</span></div>
+ </div>
+</div>
+
+<div class="wrap kvgrid">
+<aside class="kvtoc"><b>Bu sayfada</b>
+ <a href="#nerede">1. Veriler nerede durur?</a><a href="#kim">2. Kim neyi görebilir?</a><a href="#flash">3. Flash bellekle her yerde</a><a href="#kvkk">4. KVKK'da dikkat edilecekler</a><a href="#sorumluluk">5. Sorumluluklar</a><a href="#liste">6. Öğretmen kontrol listesi</a><a href="#form">7. Veli bilgilendirme ve izin formu</a><a href="#silme">8. Verileri silme</a><a href="#sss">9. Sık sorulanlar</a><a href="#kaynak">Kaynaklar</a>
+</aside>
+<div class="kvbody">
+
+<section id="nerede"><h2>1. Veriler nerede durur?</h2>
+<p>Kaşifya tek bir dosyadır ve tarayıcıda çalışır. Veriler yalnız şu üç yerde durabilir; üçü de öğretmenin elindedir:</p>
+<table class="kvt"><thead><tr><th>Yer</th><th>Ne zaman?</th><th>Ne saklanır?</th></tr></thead><tbody>
+<tr><td><b>Tahtanın tarayıcısı</b></td><td>Her zaman (varsayılan).</td><td>Sınıf listesi, puanlar, oyun ve deney sonuçları, kart tasarımları, ayarlar.</td></tr>
+<tr><td><b>Flash bellek ya da bilgisayar klasörü</b></td><td>Öğretmen bir klasör seçtiyse (isteğe bağlı).</td><td>Tahtadaki verilerin kopyası: <code>Kasifya-veri.json</code> ve son 10 günün tarihli kopyaları. Öğretmen Odası PIN'i yazılmaz.</td></tr>
+<tr><td><b>İndirilen veri dosyası</b></td><td>Öğretmen “Veri dosyasını indir” ya da “Yedek al” derse.</td><td>Tahtadaki verilerin tamamı.</td></tr>
+</tbody></table>
+<p class="note">🔒 <b>İnternete hiçbir veri gönderilmez.</b> Kaşifya'nın sunucusu, hesabı, analiz ya da reklam aracı yoktur. Uygulama, kendi kodunda bile dışarıya veri göndermeyi engelleyen bir “ağ kilidi” ile çalışır; internet bağlantısı olmadan da eksiksiz çalışır. Bu site (kasifya.github.io) yalnız uygulama dosyasını sunar. Siteyi barındıran GitHub, her web sitesinde olduğu gibi standart teknik kayıtlar (ör. IP adresi) tutabilir; bu kayıtlarda öğrenci verisi bulunmaz.</p>
+</section>
+
+<section id="kim"><h2>2. Kim neyi görebilir?</h2>
+<div class="kvwho">
+ <div class="y"><b>🧑‍🏫 Öğretmen</b><span>Kendi sınıflarının bütün verisini görür: tahtada, flash belleğinde, indirdiği dosyada.</span></div>
+ <div class="y"><b>🧑‍🚀 Öğrenci</b><span>Tahtada oyun sırasında sınıfının adlarını ve takım puanlarını görür. Raporlar, karneler ve öğrenci listesi Öğretmen Odası PIN'iyle korunur.</span></div>
+ <div class="n"><b>👥 Başka okul ya da öğretmen</b><span>Göremez. Ortak bir veritabanı yoktur; her tahtanın verisi kendi içindedir.</span></div>
+ <div class="n"><b>🛠️ Kaşifya geliştiricisi</b><span>Göremez. Kaşifya hiçbir veriyi almaz, toplamaz, saklamaz.</span></div>
+ <div class="m"><b>👥 Aynı tahtayı kullanan biri</b><span>PIN'i bilmiyorsa raporları ve listeleri açamaz; ama sınıf seçildiğinde oyun ekranlarında öğrencilerin kısaltılmış adları görünür.</span></div>
+ <div class="m"><b>🔑 Flash belleği bulan biri</b><span><code>Kasifya-veri.json</code> şifreli değildir; açan kişi içindekileri okuyabilir. Flash belleği güvenli yerde tutun, kaybolursa okul müdürüne bildirin.</span></div>
+</div>
+</section>
+
+<section id="flash"><h2>3. Flash bellekle her yerde</h2>
+<p>Bir öğretmen birden çok sınıfta, farklı tahtalarda ders veriyorsa bütün sınıflarını tek bir flash bellekte toplayabilir. Hangi tahtada açarsa açsın kaldığı yerden devam eder; sınıflar kendiliğinden birleşir.</p>
+<div class="kvsetup">
+<div class="kvs"><h3>💾 Bir kez kurun</h3><ol>
+ <li>Ana sayfadaki <b>Flash belleğe indir</b> ile aldığınız <b>kasifya.html</b> dosyasını flash bellekte bir <b>Kaşifya</b> klasörüne koyun ve tahtada Chrome ile açın.</li>
+ <li>Açılışta çıkan ekranda <b>Verilerim flash bellekte</b>'ye dokunun (ya da Panel › Yedek ve veri › <b>Flash belleği / klasörü seç</b>) ve aynı <b>Kaşifya</b> klasörünü seçin.</li>
+ <li>Tarayıcı izin sorar. Varsa <b>“Her ziyarette izin ver”</b>i seçin; böylece sonraki açılışlarda kendiliğinden bağlanır.</li>
+ <li>Bundan sonra her değişiklikten birkaç saniye sonra veriler flash belleğe yazılır. Sol alttaki <b>💾 Flash</b> düğmesi son kaydın zamanını gösterir.</li>
+</ol></div>
+<div class="kvs"><h3>🔁 Başka tahtada devam edin</h3><ol>
+ <li>Aynı flash belleği diğer tahtaya takın, Kaşifya'yı açın.</li>
+ <li>Aynı yoldan aynı klasörü seçin. İki tahtanın verisi birleşir: sınıflar bir araya gelir, iki tarafta kazanılan puanlar toplanır, silinenler silinir. Sayfa bir kez yenilenir.</li>
+ <li>Tarayıcı sonraki açılışta izin isterse sol alttaki <b>“Flash belleğe bağlanmak için dokunun”</b> düğmesine bir kez dokunun.</li>
+ <li><b>Flash belleği çıkarmadan önce</b> sol alttaki düğmede “az önce” yazdığını görün.</li>
+</ol></div>
+</div>
+<div class="kvtips"><b>📌 Bilmeniz gerekenler</b><ul>
+ <li><b>Hangi tarayıcı?</b> Otomatik klasör kaydı Chrome ve Edge'in bilgisayar sürümlerinde çalışır (Windows ya da Linux tahtalar). Firefox ve Android tahtalarda çalışmaz.</li>
+ <li><b>Desteklemeyen tahtada:</b> Aynı kutudaki <b>Veri dosyasını indir</b> ile dosyayı alıp flash belleğe koyun; diğer tahtada <b>Dosyadan birleştir</b> ile açın. Sonuç aynıdır, yalnız elle yapılır.</li>
+ <li><b>Flash takılı değilse:</b> Kaşifya tahtada çalışmaya devam eder; flash belleği takıp bağlanınca değişiklikler birleşir.</li>
+ <li><b>Tarihli kopyalar:</b> Klasörde her gün bir <code>Kasifya-yedek-YYYY-AA-GG.json</code> kopyası bırakılır (son 10 gün). Bir şey ters giderse eski bir günün dosyasını <b>Dosyadan birleştir</b> ile geri getirebilirsiniz.</li>
+ <li><b>Öğrenci ev sayfası ve online sınav yoktur.</b> Sunucusuz bir sistemde öğrenciler evden giriş yapamaz; bu bilinçli bir tercihtir.</li>
+</ul></div>
+</section>
+
+<section id="kvkk"><h2>4. KVKK'da dikkat edilecekler</h2>
+<p class="warn">⚖️ Bu bölüm genel bilgilendirmedir, hukuki görüş değildir. Uygulamayı okulda kullanmadan önce okul idarenize danışın; gerekirse il/ilçe millî eğitimin hukuk ya da bilişim birimine sorun.</p>
+<div class="kvk">
+ <div><h3>Öğrenci adı da kişisel veridir</h3><p>6698 sayılı Kişisel Verilerin Korunması Kanunu'na (KVKK) göre bir kişiyi belirleyen ya da belirlenebilir kılan her bilgi kişisel veridir. “Ahmet A.” gibi kısaltılmış ad ve sınıfla birlikte tutulan puanlar da buna dahildir. Veri internete gitmese bile tahtada ve flash bellekte işlenmiş olur.</p></div>
+ <div><h3>Çocukların verisi: veli devrede</h3><p>Öğrenciler reşit olmadığı için bilgilendirme velilere yapılır, izin gereken durumlarda izin veliden alınır. 7. bölümdeki formu kullanabilirsiniz.</p></div>
+ <div><h3>Aydınlatma</h3><p>Velilere hangi verinin, hangi amaçla, nerede ve ne kadar süre tutulacağı ile haklarının neler olduğu açıkça anlatılmalıdır. Formdaki metin bunun için hazırlanmıştır.</p></div>
+ <div><h3>Veriyi en aza indirin</h3><p>Yalnız gerekeni girin: kısaltılmış ad, sınıf, puan. <b>T.C. kimlik numarası, okul numarası, adres, telefon, sağlık bilgisi, fotoğraf girmeyin.</b> Uygulama bunları istemez.</p></div>
+ <div><h3>Flash bellek bir veri taşıyıcıdır</h3><p>Flash belleği kişisel eşyalarınız gibi koruyun, ortak bilgisayarlarda takılı bırakmayın, öğrencilere vermeyin. Mümkünse yalnız Kaşifya için ayrı bir flash bellek kullanın.</p></div>
+ <div><h3>Saklama süresi</h3><p>Verileri yalnız gerektiği kadar tutun. Önerimiz: öğretim yılı sonunda tahtadan ve flash bellekten silmek (8. bölüm).</p></div>
+ <div><h3>Velinin hakları</h3><p>Veli; çocuğuyla ilgili hangi verinin tutulduğunu öğrenme, düzeltilmesini ya da silinmesini isteme hakkına sahiptir (KVKK m. 11). Böyle bir istek gelirse öğrenciyi listeden düzeltin ya da silin.</p></div>
+ <div><h3>Herkese açık paylaşım yok</h3><p>MEB'in 29 Haziran 2026 tarihli yazısına göre okul web siteleri ve sosyal medya hesaplarında sınıf listeleri, sınav sonuçları ve öğrenci fotoğrafları herkese açık paylaşılmamalıdır. Kaşifya'daki skor tablolarının, sertifikaların ve kartların fotoğrafını da sosyal medyada paylaşmayın.</p></div>
+ <div><h3>İhlali bildirin</h3><p>Flash bellek kaybolursa, veri yanlış kişiye giderse ya da tahtaya izinsiz erişildiğinden şüphelenirseniz durumu gecikmeden okul müdürüne bildirin.</p></div>
+ <div><h3>Eğitim</h3><p>MEB, öğretmenlere ÖBA'daki kişisel verilerin korunması ve bilgi güvenliği farkındalığı eğitimlerini öneriyor.</p></div>
+</div>
+</section>
+
+<section id="sorumluluk"><h2>5. Sorumluluklar</h2>
+<div class="kvr">
+ <div><b>Öğretmen (kullanıcı)</b><ul><li>Uygulamaya hangi veriyi gireceğine kendisi karar verir ve bundan sorumludur.</li><li>Flash belleğin ve indirdiği dosyaların güvenliği ondadır.</li><li>Kullanmadan önce okul idaresine bilgi verir, velileri bilgilendirir, gerekli izinleri alır.</li><li>Yıl sonunda verileri siler.</li></ul></div>
+ <div><b>Okul idaresi</b><ul><li>Okulda kullanılacak dijital araçlar ve öğrenci verisi kuralları konusunda öğretmeni yönlendirir.</li><li>Veli izinlerinin nasıl toplanıp saklanacağına karar verir.</li></ul></div>
+ <div><b>Kaşifya</b><ul><li>Ücretsiz sunulur; öğrenci verisi toplamaz, saklamaz, işlemez, görmez ve internete göndermez.</li><li>Uygulama “olduğu gibi” sunulur. Öğretmenin girdiği veriden, flash bellek ya da cihaz güvenliğinden doğabilecek sonuçlardan sorumlu tutulamaz.</li><li>Kullanım koşulları için <a href="lisans.html">bu sayfaya</a> bakın.</li></ul></div>
+</div>
+<p class="note">Kaşifya'yı kullanan her öğretmen bu sayfadaki bilgileri okumuş ve kendi kullanımının sorumluluğunu üstlenmiş sayılır.</p>
+</section>
+
+<section id="liste"><h2>6. Öğretmen kontrol listesi</h2>
+<p>Kullanmaya başlamadan önce işaretleyin (işaretler yalnız bu tarayıcıda hatırlanır):</p>
+<div class="kvcl" id="kvcl">
+ <label><input type="checkbox" data-k="1"> Okul idaresine Kaşifya'yı kullanacağımı bildirdim.</label>
+ <label><input type="checkbox" data-k="2"> Velilere bilgilendirme ve izin formunu gönderdim; dönen formları sakladım.</label>
+ <label><input type="checkbox" data-k="3"> Öğrencileri “Ahmet A.” gibi kısaltılmış adla kaydettim.</label>
+ <label><input type="checkbox" data-k="4"> T.C. kimlik no, okul no, fotoğraf, telefon gibi bilgileri girmedim.</label>
+ <label><input type="checkbox" data-k="5"> Öğretmen Odası PIN'imi belirledim ve öğrencilerle paylaşmadım.</label>
+ <label><input type="checkbox" data-k="6"> (Flash bellek kullanıyorsam) Flash belleği güvenli yerde tutuyorum; kaybolursa okul müdürüne bildireceğim.</label>
+ <label><input type="checkbox" data-k="7"> İzin vermeyen velinin çocuğunu listeye adla eklemedim (takım ya da misafir olarak katılabilir).</label>
+ <label><input type="checkbox" data-k="8"> Skor tablosu, kart ve sertifika fotoğraflarını sosyal medyada paylaşmayacağım.</label>
+ <label><input type="checkbox" data-k="9"> Öğretim yılı sonunda verileri silmek için takvimime not aldım.</label>
+</div>
+</section>
+
+<section id="form"><h2>7. Veli bilgilendirme ve izin formu</h2>
+<p>Aşağıdaki alanları doldurup <b>Formu yazdır</b>'a basın. Metin örnektir; okul idarenizle birlikte düzenleyebilirsiniz.</p>
+<div class="kvff"><label>Okul adı <input id="fOkul" placeholder="Atatürk Ortaokulu"></label><label>Öğretmen adı <input id="fOgr" placeholder="Ad Soyad"></label><label>Ders <input id="fDers" value="Fen Bilimleri"></label><label>Öğretim yılı <input id="fYil" value="2026–2027"></label>
+ <button class="btn pri" type="button" id="fPrint">🖨️ Formu yazdır</button></div>
+<article class="kvform" id="kvform">
+ <h3>Veli Bilgilendirme ve İzin Formu</h3>
+ <p class="fsub"><span data-f="fOkul">………… Okulu</span> · <span data-f="fDers">Fen Bilimleri</span> dersi · <span data-f="fYil">2026–2027</span> öğretim yılı</p>
+ <p>Sayın Veli,</p>
+ <p><span data-f="fDers">Fen Bilimleri</span> derslerimizde öğrencilerin konuları oyunlar, deneyler ve etkinliklerle öğrenmesi için <b>Kaşifya</b> adlı eğitim uygulamasını kullanmak istiyorum. Bu form, çocuğunuzla ilgili hangi bilgilerin nasıl kullanılacağını açıklamak ve izninizi almak içindir.</p>
+ <p><b>Hangi bilgiler kullanılır?</b> Yalnız çocuğunuzun kısaltılmış adı (ör. “Ahmet A.”), sınıfı ve uygulamadaki çalışma sonuçları (oyun puanları, deney ve deneme sonuçları, kazandığı rozetler). T.C. kimlik numarası, okul numarası, adres, telefon ve fotoğraf <b>kullanılmaz</b>.</p>
+ <p><b>Amaç:</b> Derste öğrencinin hangi konularda zorlandığını görmek, öğretimi buna göre planlamak ve öğrenciyi motive etmek.</p>
+ <p><b>Nerede saklanır?</b> Bilgiler sınıftaki akıllı tahtanın tarayıcısında ve öğretmenin kendi flash belleğinde saklanır. <b>İnternete gönderilmez</b>; herhangi bir sunucuya, başka öğretmenlere, uygulamanın geliştiricisine ya da üçüncü kişilere verilmez ve herkese açık yayımlanmaz.</p>
+ <p><b>Ne kadar süre?</b> Bilgiler öğretim yılı sonunda silinir.</p>
+ <p><b>Haklarınız:</b> 6698 sayılı Kişisel Verilerin Korunması Kanunu'nun 11. maddesi uyarınca çocuğunuzla ilgili hangi bilgilerin tutulduğunu öğrenebilir, düzeltilmesini ya da silinmesini isteyebilirsiniz. Bunun için öğretmene ya da okul idaresine başvurabilirsiniz.</p>
+ <p><b>İzin vermezseniz:</b> Çocuğunuz derslere ve sınıf etkinliklerine yine katılır; yalnız adı uygulamaya kaydedilmez, takım ya da misafir olarak oynar.</p>
+ <div class="fbox">
+  <p>Öğrencinin adı soyadı: ……………………………………… Sınıfı: …………</p>
+  <p>☐ Bu formu okudum ve bilgilendirildim. Çocuğumun yukarıda açıklanan bilgilerinin Kaşifya uygulamasında kullanılmasına <b>izin veriyorum</b>.</p>
+  <p>☐ İzin <b>vermiyorum</b>.</p>
+  <p class="fsig"><span>Velinin adı soyadı: ………………………………</span><span>Tarih: …… / …… / ……</span><span>İmza: ……………</span></p>
+ </div>
+ <p class="fsmall">Öğretmen: <span data-f="fOgr">………………</span> · Bu form okulda saklanır.</p>
+</article>
+</section>
+
+<section id="silme"><h2>8. Verileri silme</h2>
+<ol class="kvol">
+ <li><b>Tek bir öğrenciyi silmek:</b> Öğretmen Odası › Sınıfım › Öğrenci listesi (Panel) › öğrenciyi silin. Flash bellek bağlıysa silme oraya da yansır.</li>
+ <li><b>Flash bellekteki veriyi silmek:</b> Klasördeki <code>Kasifya-veri.json</code> ve <code>Kasifya-yedek-…json</code> dosyalarını silin. Panel › Yedek ve veri › <b>Bağlantıyı kaldır</b> ile tahtanın klasörle bağını da kesin.</li>
+ <li><b>Tahtadaki her şeyi silmek:</b> Tarayıcının ayarlarında bu sitenin (ya da dosyanın) kayıtlı verilerini temizleyin. Bunu kullandığınız her tahtada yapın.</li>
+ <li><b>İndirdiğiniz dosyalar:</b> Bilgisayarınızda ya da başka bir flash bellekte tuttuğunuz Kaşifya dosyalarını da silin.</li>
+</ol>
+</section>
+
+<section id="sss"><h2>9. Sık sorulanlar</h2>
+<details><summary>Kaşifya gerçekten hiçbir şeyi internete göndermiyor mu?</summary><p>Evet. Kaşifya'nın sunucusu yoktur ve uygulama, dışarıya veri gönderen her türlü isteği engelleyen bir ağ kilidiyle çalışır. İnternetsiz bir tahtada da eksiksiz çalışır.</p></details>
+<details><summary>Flash belleği unutursam ne olur?</summary><p>Hiçbir şey kaybolmaz. Kaşifya o tahtada çalışmaya devam eder; flash belleği takıp bağlandığınızda değişiklikler birleşir.</p></details>
+<details><summary>İki tahtada aynı anda çalışabilir miyim?</summary><p>Aynı flash bellek aynı anda tek tahtada takılı olabildiği için sorun çıkmaz. Flash takılı değilken iki tahtada da değişiklik yaptıysanız, sonra flash belleği taktığınızda iki tarafın değişiklikleri birleştirilir.</p></details>
+<details><summary>Tahtam Android ya da tarayıcım Firefox. Ne yapacağım?</summary><p>Otomatik kayıt bu tarayıcılarda çalışmaz. Panel › Yedek ve veri'deki <b>Veri dosyasını indir</b> ve <b>Dosyadan birleştir</b> düğmeleriyle aynı işi elle yaparsınız.</p></details>
+<details><summary>Başka bir öğretmen benim öğrencilerimi görebilir mi?</summary><p>Başka bir tahtada ya da okulda göremez; ortak bir veritabanı yoktur. Aynı tahtayı paylaşıyorsanız raporlar ve listeler PIN'le korunur.</p></details>
+<details><summary>Bir öğrenci kendini öğretmen gibi gösterebilir mi?</summary><p>Öğretmen Odası PIN ile korunur; PIN'inizi paylaşmayın. Öğretmen modu 10 dakika işlem olmazsa kendiliğinden kilitlenir.</p></details>
+<details><summary>Öğrenciler evden kendi sayfalarını görebilir mi? Online sınav var mı?</summary><p>Hayır. Bu, sunucusuz çalışmanın bilinçli bir sonucudur: veri internete çıkmadığı için evden erişim de yoktur. Tahtada süreli deneme ve kâğıt deneme kullanılabilir.</p></details>
+<details><summary>Bu sayfa hukuki görüş yerine geçer mi?</summary><p>Hayır. Bu sayfa genel bilgilendirmedir. Okulunuza özgü durumlar için okul idarenize ve gerekirse hukuk birimine danışın.</p></details>
+</section>
+
+<section id="kaynak"><h2>Kaynaklar</h2><ul class="kvol">
+ <li><a href="https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6698.pdf" target="_blank" rel="noopener">6698 sayılı Kişisel Verilerin Korunması Kanunu (mevzuat.gov.tr)</a></li>
+ <li><a href="https://www.kvkk.gov.tr" target="_blank" rel="noopener">Kişisel Verileri Koruma Kurumu</a></li>
+ <li><a href="https://www.turkiyeegitim.com/mebden-kritik-kvkk-genelgesi-ogrenci-ve-personel-verileri-icin-10-maddelik-uyari-141850h.htm" target="_blank" rel="noopener">MEB'in 29 Haziran 2026 tarihli KVKK yazısı · Türkiye Eğitim</a></li>
+</ul></section>
+<p class="upd">Son güncelleme: 29 Ekim 2026</p>
+</div></div>
+</main>
+
+
+<footer><div class="wrap"><span>© 2026 TK · Kaşifya. Tüm hakları saklıdır. Öğretmenler ücretsiz kullanabilir; izinsiz kopyalanamaz ve dağıtılamaz. <a href="lisans.html">Kullanım koşulları</a> · <a href="veri-ve-kvkk.html">Veri güvenliği ve KVKK</a></span><span><a href="https://www.instagram.com/tkasifya/" target="_blank" rel="noopener">📷 Instagram: @tkasifya</a></span><span class="tk"><em>TK</em> Tasarım ve geliştirme: TK</span></div></footer>
+<script>
+(function(){var K='kasifyaKvkkListe';var S={};try{S=JSON.parse(localStorage.getItem(K)||'{}')}catch(e){}
+document.querySelectorAll('#kvcl input').forEach(function(c){c.checked=!!S[c.dataset.k];c.addEventListener('change',function(){S[c.dataset.k]=c.checked;try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}})});
+var F=['fOkul','fOgr','fDers','fYil'];function paint(){F.forEach(function(id){var v=document.getElementById(id).value.trim();document.querySelectorAll('[data-f="'+id+'"]').forEach(function(s){if(!s.dataset.d)s.dataset.d=s.textContent;s.textContent=v||s.dataset.d})})}
+F.forEach(function(id){document.getElementById(id).addEventListener('input',paint)});paint();
+document.getElementById('fPrint').addEventListener('click',function(){paint();window.print()})})();
+</script>
+</body>
+</html>

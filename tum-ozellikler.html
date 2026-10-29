@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kaşifya · Tüm özellikler</title>
+<meta name="description" content="Kaşifya: ortaokul fen bilimleri (5–8. sınıf) için akıllı tahtada sınıfça oynanan oyunlar, 3B deneyler, atölyeler ve kazanım takibi. İnternetsiz çalışır, veriler cihazda kalır.">
+<meta property="og:title" content="Kaşifya">
+<meta property="og:description" content="Fen bilimleri için sınıfça oyunlar, 3B deneyler ve keşif · 5–8. sınıf">
+<meta property="og:image" content="img/anaus.jpg">
+<link rel="icon" type="image/png" sizes="32x32" href="img/kivilcim/favicon-32.png"><link rel="apple-touch-icon" href="img/kivilcim/apple-touch-icon.png">
+<style>
+:root{--bg:#070b1f;--bg2:#0e1538;--ink:#eef1ff;--mut:#a9b3d6;--line:rgba(255,255,255,.12);--c1:#6de8ff;--c2:#8f7dff;--c3:#ff8fb8;--gold:#ffd36e}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Segoe UI",Inter,system-ui,-apple-system,Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+body::before{content:'';position:fixed;inset:0;z-index:-1;background:
+ radial-gradient(1px 1px at 12% 18%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 68% 8%,#fff 50%,transparent 51%),radial-gradient(1.5px 1.5px at 84% 36%,#cfe 50%,transparent 51%),
+ radial-gradient(1px 1px at 32% 64%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 52% 88%,#dde 50%,transparent 51%),radial-gradient(1.5px 1.5px at 6% 82%,#fff 50%,transparent 51%),
+ radial-gradient(60% 50% at 80% 0%,rgba(143,125,255,.22),transparent 70%),radial-gradient(50% 40% at 0% 30%,rgba(109,232,255,.14),transparent 70%),var(--bg)}
+a{color:var(--c1)}img{max-width:100%;height:auto;display:block}
+.wrap{width:min(1180px,100% - 32px);margin:0 auto}
+header{position:sticky;top:0;z-index:5;backdrop-filter:blur(10px);background:rgba(7,11,31,.72);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:14px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-weight:900;letter-spacing:.14em;font-size:18px}
+.logo svg{width:34px;height:34px}
+.nav nav{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}.nav nav a{color:var(--mut);text-decoration:none;padding:8px 12px;border-radius:10px;font-weight:600;font-size:15px}.nav nav a:hover{color:var(--ink);background:rgba(255,255,255,.06)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 18px;border-radius:14px;font-weight:800;text-decoration:none;font-size:16px;white-space:nowrap;border:1px solid var(--line);color:var(--ink);background:rgba(255,255,255,.06)}
+.btn.pri{background:linear-gradient(135deg,var(--c1),var(--c2));color:#060a1f;border-color:transparent;box-shadow:0 10px 30px rgba(109,140,255,.35)}
+.btn:hover{transform:translateY(-1px)}
+.hero{padding:72px 0 40px;display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:center}
+.kick{display:inline-block;font-size:13px;letter-spacing:.24em;font-weight:800;color:var(--gold);margin-bottom:14px}
+h1{font-size:clamp(40px,6vw,72px);line-height:1.02;margin:0 0 18px;letter-spacing:-.02em}
+h1 span{background:linear-gradient(90deg,var(--c1),var(--c2),var(--c3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:clamp(17px,2vw,21px);color:var(--mut);margin:0 0 26px;max-width:36em}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.note{margin-top:16px;font-size:14px;color:var(--mut)}
+.shot{border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.hero .shot{transform:perspective(1400px) rotateY(-8deg) rotateX(3deg)}
+section{padding:56px 0}h2{font-size:clamp(28px,3.6vw,40px);margin:0 0 10px;letter-spacing:-.01em}.sub{color:var(--mut);margin:0 0 30px;max-width:46em}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:10px}
+.stat{padding:18px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--line)}.stat b{display:block;font-size:34px;line-height:1.1;background:linear-gradient(90deg,var(--c1),var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent}.stat span{color:var(--mut);font-size:15px}
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.f{padding:22px;border-radius:18px;background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid var(--line)}
+.f i{font-style:normal;font-size:30px}.f h3{margin:10px 0 6px;font-size:20px}.f p{margin:0;color:var(--mut);font-size:15.5px}
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.gal figure{margin:0}.gal figcaption{margin-top:10px;color:var(--mut);font-size:15px}.gal figcaption b{color:var(--ink)}
+.wide{grid-column:1/-1}
+.gal figure:not(.wide) .shot{aspect-ratio:16/9;background:#0a0f2a}.gal figure:not(.wide) .shot img{width:100%;height:100%;object-fit:cover;object-position:left top}
+.gal .shot{box-shadow:0 18px 44px rgba(0,0,0,.45)}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s}
+.step{padding:22px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.03);position:relative}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:-14px;left:18px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:#2a1a00;font-weight:900}
+.step h3{margin:6px 0 6px;font-size:19px}.step p{margin:0;color:var(--mut);font-size:15.5px}
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.t{padding:20px;border-radius:16px;border:1px solid rgba(95,242,168,.3);background:rgba(95,242,168,.05)}.t b{display:block;margin-bottom:4px}.t span{color:var(--mut);font-size:15px}
+.band{margin:20px 0 0;padding:34px;border-radius:24px;background:linear-gradient(135deg,rgba(109,232,255,.16),rgba(143,125,255,.18),rgba(255,143,184,.14));border:1px solid var(--line);display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.band h2{margin:0}
+footer{padding:36px 0 50px;color:var(--mut);font-size:14.5px;border-top:1px solid var(--line);margin-top:30px}
+footer .wrap{display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap;align-items:center}
+.tk{display:inline-flex;align-items:center;gap:8px}.tk em{font-style:normal;display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--gold);color:#2a1a00;font-weight:900;font-size:13px}
+@media (max-width:900px){.hero{grid-template-columns:1fr;padding-top:40px}.hero .shot{transform:none}.feat,.how,.trust{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}.nav nav{display:none}}
+@media (max-width:600px){.feat,.how,.trust,.gal{grid-template-columns:1fr}.btn{width:100%;justify-content:center}}
+.tree{margin:22px 0 0;padding:18px 22px;border-radius:16px;background:rgba(0,0,0,.25);border:1px solid var(--line);color:#cfe6ff;font:15px/1.6 ui-monospace,Menlo,Consolas,monospace;overflow:auto}
+.upd2{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}.upd2>div{padding:20px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.03)}.upd2 h3{margin:0 0 6px;font-size:19px}.upd2 p{margin:0;color:var(--mut);font-size:15.5px}
+@media (max-width:900px){.upd2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+ <a class="logo" href="index.html"><img src="img/kivilcim/kivilcim_kafa.svg" alt="" width="38" height="38" style="width:38px;height:38px">KAŞİFYA</a>
+ <nav><a href="index.html">← Tanıtım</a><a href="#ozellikler">Özellikler</a><a href="#galeri">Ekranlar</a><a href="#nasil">Nasıl kullanılır</a><a href="veri-ve-kvkk.html">Veri ve KVKK</a><a href="https://www.instagram.com/tkasifya/" target="_blank" rel="noopener">Instagram</a></nav>
+</div></header>
+
+<main>
+<div class="wrap hero">
+ <div>
+  <span class="kick">FEN BİLİMLERİ · 5–8. SINIF</span>
+  <h1>Sınıfça <span>keşfet</span>,<br>oyna, öğren.</h1>
+  <p class="lead">Kaşifya, akıllı tahtada bütün sınıfın birlikte oynadığı fen oyunları, 3B deneyler ve ders atölyeleri sunar. Öğretmen her kazanımı tek ekranda takip eder.</p>
+  <div class="cta"><a class="btn pri" href="uygulama/index.html" download="kasifya.html">⬇️ Flash belleğe indir</a><a class="btn" href="#nasil">📘 Nasıl kurulur?</a><a class="btn" href="uygulama/">🚀 Tarayıcıda dene</a></div>
+  <p class="note">Tek dosya, internetsiz çalışır. Hiçbir veri internete gönderilmez; uygulama da öğrenci verileri de sizin flash belleğinizde durur. Öğretmenler için ücretsizdir, paylaşmak için bu sayfanın bağlantısını verin.</p>
+ </div>
+ <div class="shot"><img src="img/anaus.jpg" alt="Kaşifya ana ekranı: Oyna, Keşfet, Sefer, Deneme Merkezi, Kart Stüdyosu ve Öğretmen Odası kapıları" width="1600" height="727"></div>
+</div>
+
+<div class="wrap"><div class="stats">
+ <div class="stat"><b>111</b><span>sınıf ve takım oyunu</span></div>
+ <div class="stat"><b>49</b><span>ders atölyesi</span></div>
+ <div class="stat"><b>37</b><span>haftalık kazanım haritası</span></div>
+ <div class="stat"><b>0</b><span>kurulum, tek dosya</span></div>
+</div></div>
+
+<section id="ozellikler"><div class="wrap">
+ <h2>Bir fen dersinin ihtiyacı olan her şey</h2>
+ <p class="sub">Isınmadan çıkış biletine kadar, dersin her anı için bir araç. Öğrenciler oynarken siz kimin neyi öğrendiğini görürsünüz.</p>
+ <div class="feat">
+  <div class="f"><i>🎮</i><h3>Bütün sınıf birlikte</h3><p>Herkes A·B·C·D kartını kaldırır, siz çoğunluğu bir dokunuşla girersiniz. Takım yarışları ve tüm sınıf oyunları.</p></div>
+  <div class="f"><i>🧪</i><h3>3B deney ve atölye</h3><p>Düzeneği kur, “Kontrol et” de, sonucu gör. Tanecikler, kaldıraç, devre, lazer, mevsimler ve daha fazlası.</p></div>
+  <div class="f"><i>🔮</i><h3>Tahmin et · Gözle · Açıkla</h3><p>Deneyden önce sınıf tahmin eder; sonuçta kimin doğru tahmin ettiğini ve yaygın yanılgıyı görürsünüz.</p></div>
+  <div class="f"><i>🗺️</i><h3>Kazanım haritası</h3><p>Yılın 37 haftası tek yolda. Her kazanım kavranmış, gelişiyor ya da desteğe ihtiyaç rengiyle görünür.</p></div>
+  <div class="f"><i>📝</i><h3>Deneme Merkezi</h3><p>Tahtada süreli yeni nesil deneme ve kâğıt deneme. Soru türüne göre analiz, kazanım haritasına otomatik yansıma.</p></div>
+  <div class="f"><i>🎴</i><h3>Öğrencinin kartı</h3><p>Kart Stüdyosu’nda kendi cevap kartını tasarlar: holo kartlar, görev arması, neon, çıkartmalar ve unvanlar.</p></div>
+ </div>
+</div></section>
+
+<section id="galeri"><div class="wrap">
+ <h2>Ekranlar</h2>
+ <p class="sub">Akıllı tahtada uzaktan okunacak büyüklükte, sade ve renkli.</p>
+ <div class="gal">
+  <figure class="wide"><div class="shot"><img src="img/deney3b.jpg" alt="3B deneyler: bileşke kuvvet, elektriklenme, üreme, ay evreleri, yoğunluk, tutulma" loading="lazy" width="1952" height="834"></div><figcaption><b>70 deney, hepsi 3B.</b> Bileşke kuvvetten tutulmaya; her ölçüm sahnede büyük yazıyla, sonuç tabloya ve grafiğe düşer.</figcaption></figure>
+  <figure><div class="shot"><img src="img/oyunlar.jpg" alt="Oyna menüsü: Oyunlar, Konu oyunları, Ders atölyesi, Sınıf etkinlikleri" loading="lazy" width="1600" height="509"></div><figcaption><b>Oyna menüsü.</b> Oyunlar, konu oyunları, ders atölyesi ve sınıf etkinlikleri; sınıf düzeyine göre süz, seç, başlat.</figcaption></figure>
+  <figure><div class="shot"><img src="img/tahmin.jpg" data-x="1" alt="Sınıfın tahmini ve sonuç kartı" loading="lazy" width="1280" height="720"></div><figcaption><b>Sınıfça tahmin.</b> Herkes harfini kaldırır; çoğunluğun tahmini deneyin hipotezi olur.</figcaption></figure>
+  <figure><div class="shot"><img src="img/harita.jpg" data-x="1" alt="Kazanım haritası: 37 haftalık yol" loading="lazy" width="1280" height="720"></div><figcaption><b>Kazanım haritası.</b> Yıllık yolculukta nerede olduğunuzu görün.</figcaption></figure>
+  <figure><div class="shot"><img src="img/kart.jpg" alt="Kart Stüdyosu: kozmik, holo ve gezegen pusulası cevap kartları" loading="lazy" width="1535" height="864"></div><figcaption><b>Kart Stüdyosu.</b> Öğrenci kendi A-B-C-D cevap kartını tasarlar; A4’e basılır.</figcaption></figure>
+  <figure><div class="shot"><img src="img/ben.jpg" data-x="1" alt="Öğrenci paneli: Kaşif kimlik kartı" loading="lazy" width="1280" height="720"></div><figcaption><b>Kaşif kimlik kartı.</b> Galaksisinin renginde, Türk bayraklı; rütbesi ve unvanıyla.</figcaption></figure>
+  <figure><div class="shot"><img src="img/oda.jpg" data-x="1" alt="Öğretmen Odası: Planla, Raporlar, Sınıfım, Sistem" loading="lazy" width="1280" height="720"></div><figcaption><b>Öğretmen Odası.</b> Plan, rapor, sınıf ve sistem tek ekranda.</figcaption></figure>
+  <figure><div class="shot"><img src="img/kasifussu.jpg" alt="Öğrencinin Kaşif üssü: kimlik kartı ve renkli bölümler" loading="lazy" width="1600" height="858"></div><figcaption><b>Kaşif üssü.</b> Öğrenci kendi koduyla girer: deneyleri, kara deliği, ödevleri, rekorları.</figcaption></figure>
+  <figure><div class="shot"><img src="img/bekleme.jpg" alt="Bekleme salonu: sınıfın galaksisi, saat, bu gecenin Ay’ı ve robot Kaşifya’nın bilgi notu" loading="lazy" width="1600" height="900"></div><figcaption><b>Bekleme salonu.</b> Teneffüste sınıfın galaksisi döner; saat, bu gecenin Ay’ı ve “Biliyor muydun?”.</figcaption></figure>
+ </div>
+</div></section>
+
+<section id="nasil"><div class="wrap">
+ <h2>Kaşifya cebinizde: flash bellekle kurulum</h2>
+ <p class="sub">Uygulama da öğrencilerinizin verileri de kendi flash belleğinizde durur. Hangi tahtaya takarsanız orada kaldığınız yerden devam edersiniz.</p>
+ <div class="how">
+  <div class="step"><h3>İndirin</h3><p><a href="uygulama/index.html" download="kasifya.html">Flash belleğe indir</a> düğmesiyle <b>kasifya.html</b> dosyasını alın. Flash bellekte <b>Kaşifya</b> adında bir klasör açıp dosyayı içine koyun.</p></div>
+  <div class="step"><h3>Açın ve bağlayın</h3><p>Dosyayı tahtada <b>Chrome</b> ile açın. Karşınıza çıkan ekranda <b>Verilerim flash bellekte</b>'ye dokunup aynı <b>Kaşifya</b> klasörünü seçin; tarayıcı sorarsa <b>Her ziyarette izin ver</b> deyin.</p></div>
+  <div class="step"><h3>Kullanın</h3><p>Sınıfınızı ekleyin, oynayın. Her değişiklik birkaç saniye içinde flash belleğe kaydedilir. Başka tahtada aynı dosyayı açın: sınıflarınız gelir, birleşir.</p></div>
+ </div>
+ <pre class="tree">FLASH BELLEK
+└── Kaşifya
+    ├── kasifya.html          ← uygulama
+    ├── Kasifya-veri.json     ← verileriniz (kendiliğinden kaydedilir)
+    └── Kasifya-yedek-….json  ← son 10 günün kopyaları</pre>
+ <div class="upd2">
+  <div><h3>🔄 Güncelleme</h3><p>Yeni sürüm çıkınca bu sayfadan <b>kasifya.html</b>'yi yeniden indirin ve flash bellekteki eski dosyanın <b>üstüne</b> kopyalayın. Verileriniz yanındaki dosyada durduğu için hiçbir şey kaybolmaz. Uygulama boş açılırsa <b>Verilerim flash bellekte</b> deyip klasörü seçmeniz yeterli.</p></div>
+  <div><h3>🖥️ Tahta uyumu</h3><p>Otomatik kayıt Chrome ve Edge'in bilgisayar sürümünde çalışır; Pardus tahtalarda Chrome ile kullanılabilir. Android tahtada ya da Firefox'ta <b>Veri dosyasını indir</b> ve <b>Dosyadan birleştir</b> ile aynı iş elle yapılır.</p></div>
+  <div><h3>🔒 Gizlilik</h3><p>Kaşifya'nın sunucusu yoktur ve internete veri göndermez. Ayrıntılar ve veli izin formu: <a href="veri-ve-kvkk.html">Veri güvenliği ve KVKK</a>.</p></div>
+ </div>
+</div></section>
+
+<section><div class="wrap">
+ <h2>Veriler sizde kalır</h2>
+ <div class="trust">
+  <div class="t"><b>🔒 Sunucuya gönderilmez</b><span>Öğrenci ve sınıf bilgileri yalnız kullanılan tarayıcıda durur. <a href="veri-ve-kvkk.html">Veri güvenliği ve KVKK →</a></span></div>
+  <div class="t"><b>💾 Yedek sizde</b><span>Tek tıkla yedek alın, başka tahtaya taşıyın.</span></div>
+  <div class="t"><b>💾 Flash bellekle her yerde</b><span>Veriler seçtiğiniz flash belleğe kendiliğinden kaydedilir. Başka tahtada açınca sınıflar birleşir.</span></div>
+ </div>
+ <div class="band"><div><h2>Derse hazır mısınız?</h2><p class="sub" style="margin:6px 0 0">Ücretsiz. Tek dosya. Flash belleğinize indirin.</p></div><a class="btn pri" href="uygulama/index.html" download="kasifya.html">⬇️ Flash belleğe indir</a></div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 TK · Kaşifya. Tüm hakları saklıdır. Öğretmenler ücretsiz kullanabilir; izinsiz kopyalanamaz ve dağıtılamaz. <a href="lisans.html">Kullanım koşulları</a> · <a href="veri-ve-kvkk.html">Veri güvenliği ve KVKK</a></span><span><a href="https://www.instagram.com/tkasifya/" target="_blank" rel="noopener">📷 Instagram: @tkasifya</a></span><span class="tk"><em>TK</em> Tasarım ve geliştirme: TK</span></div></footer>
+</body>
+</html>
