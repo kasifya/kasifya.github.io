@@ -116,7 +116,7 @@ code{font-size:.92em;padding:1px 6px;border-radius:6px;background:rgba(255,255,2
 <table class="kvt"><thead><tr><th>Yer</th><th>Ne zaman?</th><th>Ne saklanır?</th></tr></thead><tbody>
 <tr><td><b>Tahtanın tarayıcısı</b></td><td>Her zaman (varsayılan).</td><td>Sınıf listesi, puanlar, oyun ve deney sonuçları, kart tasarımları, ayarlar.</td></tr>
 <tr><td><b>Flash bellek ya da bilgisayar klasörü</b></td><td>Öğretmen bir klasör seçtiyse (isteğe bağlı).</td><td>Tahtadaki verilerin kopyası: <code>Kasifya-veri.json</code> ve son 10 günün tarihli kopyaları. Öğretmen Odası PIN'i yazılmaz.</td></tr>
-<tr><td><b>İndirilen veri dosyası</b></td><td>Öğretmen “Veri dosyasını indir” ya da “Yedek al” derse.</td><td>Tahtadaki verilerin tamamı.</td></tr>
+<tr><td><b>İndirilen veri dosyası</b></td><td>Öğretmen “Veri dosyasını indir” der ya da flash bağlı değilken “Yedek al” deyip “Bu bilgisayara indir”i seçerse. Flash bağlıysa “Yedek al” dosyayı doğrudan flash klasörüne yazar.</td><td>Tahtadaki verilerin tamamı.</td></tr>
 </tbody></table>
 <p class="note">🔒 <b>İnternete hiçbir veri gönderilmez.</b> Kaşifya'nın sunucusu, hesabı, analiz ya da reklam aracı yoktur. Uygulama, kendi kodunda bile dışarıya veri göndermeyi engelleyen bir “ağ kilidi” ile çalışır; internet bağlantısı olmadan da eksiksiz çalışır. Bu site (kasifya.github.io) yalnız uygulama dosyasını sunar. Siteyi barındıran GitHub, her web sitesinde olduğu gibi standart teknik kayıtlar (ör. IP adresi) tutabilir; bu kayıtlarda öğrenci verisi bulunmaz.</p>
 </section>
@@ -152,7 +152,7 @@ code{font-size:.92em;padding:1px 6px;border-radius:6px;background:rgba(255,255,2
  <li><b>Hangi tarayıcı?</b> Otomatik klasör kaydı Chrome ve Edge'in bilgisayar sürümlerinde çalışır (Windows ya da Linux tahtalar). Firefox ve Android tahtalarda çalışmaz.</li>
  <li><b>Desteklemeyen tahtada:</b> Aynı kutudaki <b>Veri dosyasını indir</b> ile dosyayı alıp flash belleğe koyun; diğer tahtada <b>Dosyadan birleştir</b> ile açın. Sonuç aynıdır, yalnız elle yapılır.</li>
  <li><b>Flash takılı değilse:</b> Kaşifya tahtada çalışmaya devam eder; flash belleği takıp bağlanınca değişiklikler birleşir.</li>
- <li><b>Tarihli kopyalar:</b> Klasörde her gün bir <code>Kasifya-yedek-YYYY-AA-GG.json</code> kopyası bırakılır (son 10 gün). Bir şey ters giderse eski bir günün dosyasını <b>Dosyadan birleştir</b> ile geri getirebilirsiniz.</li>
+ <li><b>Tarihli kopyalar:</b> Klasörde her gün bir <code>Kasifya-yedek-YYYY-AA-GG.json</code> kopyası bırakılır (son 10 gün). “Yedek al” dediğinizde de <code>Kasifya-yedek-elle-….json</code> yazılır (son 10 tane). Bir şey ters giderse eski bir günün dosyasını <b>Dosyadan birleştir</b> ile geri getirebilirsiniz.</li>
  <li><b>Öğrenci ev sayfası ve online sınav yoktur.</b> Sunucusuz bir sistemde öğrenciler evden giriş yapamaz; bu bilinçli bir tercihtir.</li>
 </ul></div>
 </section>

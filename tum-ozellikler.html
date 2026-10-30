@@ -124,17 +124,21 @@ footer .wrap{display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap;
  <p class="sub">Uygulama da öğrencilerinizin verileri de kendi flash belleğinizde durur. Hangi tahtaya takarsanız orada kaldığınız yerden devam edersiniz.</p>
  <div class="how">
   <div class="step"><h3>İndirin</h3><p><a href="uygulama/index.html" download="kasifya.html">Flash belleğe indir</a> düğmesiyle <b>kasifya.html</b> dosyasını alın. Flash bellekte <b>Kaşifya</b> adında bir klasör açıp dosyayı içine koyun.</p></div>
-  <div class="step"><h3>Açın ve bağlayın</h3><p>Dosyayı tahtada <b>Chrome</b> ile açın. Karşınıza çıkan ekranda <b>Verilerim flash bellekte</b>'ye dokunup aynı <b>Kaşifya</b> klasörünü seçin; tarayıcı sorarsa <b>Her ziyarette izin ver</b> deyin.</p></div>
-  <div class="step"><h3>Kullanın</h3><p>Sınıfınızı ekleyin, oynayın. Her değişiklik birkaç saniye içinde flash belleğe kaydedilir. Başka tahtada aynı dosyayı açın: sınıflarınız gelir, birleşir.</p></div>
+  <div class="step"><h3>Açın ve bağlayın</h3><p>Dosyayı tahtada <b>Chrome</b> ile açın. Karşınıza çıkan ekranda <b>Verilerim flash bellekte</b>'ye dokunup aynı <b>Kaşifya</b> klasörünü seçin; tarayıcı sorarsa <b>Her ziyarette izin ver</b> deyin. Veri ve yedek dosyaları bu adımda klasörde kendiliğinden oluşur. Eski bir veri dosyanız varsa <b>Verilerim › Diğer seçenekler › Eski dosyayı esas al</b> ile bir kez yükleyin.</p></div>
+  <div class="step"><h3>Her sınıfta: tak, aç, çıkar</h3><p>Flash belleği takın, Kaşifya'yı o tahtadaki kopyadan açın, dersinizi yapın. Her değişiklik (oyun puanları, öğrencilerin astronot ve gezegen seçimi) birkaç saniyede flash belleğe yazılır. Sol alttaki <b>💾 Flash · az önce</b> yazısını görünce flash belleği çıkarın. Başka tahtada aynı şeyi tekrarlayın: iki tahtanın değişiklikleri birleşir, yeni değişiklik kazanır, puanlar toplanır.</p></div>
+
  </div>
+ <p class="sub" style="margin:14px 0 6px"><b>İndirince klasörde yalnız <code>kasifya.html</code> olur.</b> Veri ve yedek dosyalarını siz kopyalamazsınız; uygulama, flash klasörünü seçtiğiniz anda kendisi oluşturur. Birkaç saniye sonra klasör şöyle görünür:</p>
  <pre class="tree">FLASH BELLEK
 └── Kaşifya
-    ├── kasifya.html          ← uygulama
-    ├── Kasifya-veri.json     ← verileriniz (kendiliğinden kaydedilir)
-    └── Kasifya-yedek-….json  ← son 10 günün kopyaları</pre>
+    ├── kasifya.html                          ← uygulama (indirdiğiniz tek dosya)
+    ├── Kasifya-veri.json                     ← verileriniz (uygulama oluşturur, kendiliğinden güncellenir)
+    ├── Kasifya-yedek-2026-10-30.json         ← günlük kopya, son 10 gün (uygulama oluşturur)
+    └── Kasifya-yedek-elle-….json             ← Verilerim › “Tam yedek al” ile bağlı flash belleğe yazılır</pre>
  <div class="upd2">
   <div><h3>🔄 Güncelleme</h3><p>Yeni sürüm çıkınca bu sayfadan <b>kasifya.html</b>'yi yeniden indirin ve flash bellekteki eski dosyanın <b>üstüne</b> kopyalayın. Verileriniz yanındaki dosyada durduğu için hiçbir şey kaybolmaz. Uygulama boş açılırsa <b>Verilerim flash bellekte</b> deyip klasörü seçmeniz yeterli.</p></div>
-  <div><h3>🖥️ Tahta uyumu</h3><p>Otomatik kayıt Chrome ve Edge'in bilgisayar sürümünde çalışır; Pardus tahtalarda Chrome ile kullanılabilir. Android tahtada ya da Firefox'ta <b>Veri dosyasını indir</b> ve <b>Dosyadan birleştir</b> ile aynı iş elle yapılır.</p></div>
+  <div><h3>🖥️ Tahta uyumu</h3><p>Otomatik kayıt Chrome ve Edge'in bilgisayar sürümünde çalışır; Pardus tahtalarda Chrome ile kullanılabilir. Android tahtada ya da Firefox'ta <b>Veri dosyasını indir</b> ve <b>Dosyadan birleştir</b> ile aynı iş elle yapılır. Bu tarayıcılarda <b>💾 Verilerim</b> penceresinden dosya olarak indirilir; flash belleğe elle kopyalayın.</p></div>
+  <div><h3>💾 Tek yedek penceresi</h3><p>Kaşifya'daki bütün <b>Yedek al</b> düğmeleri (sol alt, Ayarlar, Öğretmen paneli) aynı <b>Verilerim</b> penceresini açar. Flash bağlı değilken sol altta kırmızı <b>Flash bağlı değil</b> düğmesi görünür; dokunun, klasörü seçin. Her tahtada <b>hep aynı kopyayı</b> açın: flash belleğin içindeki dosyayı doğrudan açmak, tarayıcıda ayrı bir veri alanı demektir.</p></div>
   <div><h3>🔒 Gizlilik</h3><p>Kaşifya'nın sunucusu yoktur ve internete veri göndermez. Ayrıntılar ve veli izin formu: <a href="veri-ve-kvkk.html">Veri güvenliği ve KVKK</a>.</p></div>
  </div>
 </div></section>
